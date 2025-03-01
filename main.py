@@ -3,8 +3,6 @@
 
 # # 가계부 웹 대시보드
 
-# In[4]:
-
 
 import pandas as pd
 import streamlit as st
@@ -20,9 +18,6 @@ df.info()
 
 
 # ## 사이드바 생성
-
-# In[ ]:
-
 
 # 초기 설정
 transaction_types = df['Transaction_Types'].unique().tolist()
@@ -94,8 +89,6 @@ st.dataframe(df)
 
 # ## 대제목 생성
 
-# In[ ]:
-
 
 # 제목에 HTML과 CSS 스타일을 추가하여 줄 바꿈 방지
 st.markdown('<h1 style="white-space: nowrap;">Spend Wisely! - Your Financial Journey</h1>', unsafe_allow_html=True)
@@ -112,8 +105,6 @@ st.divider()
 
 
 # ## part1_box graph
-
-# In[ ]:
 
 
 st.subheader(
@@ -133,10 +124,3 @@ with col2 :
     )
     st.plotly_chart(fig1)
 st.divider()
-
-
-# In[ ]:
-
-
-
-
